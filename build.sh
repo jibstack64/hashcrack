@@ -1,0 +1,1 @@
+go build -o hashcrack hashcrack.go colour.go
