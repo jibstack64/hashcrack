@@ -22,7 +22,6 @@ var (
 	genFile     string
 	useFile     string
 	inputHash   string
-	max         uint64
 
 	// common num-char char-num replaces in passwords
 	numChar = map[rune]rune{'a': '4', 'b': '8', 'e': '3', 'g': '9', 'i': '1', 'o': '0', 's': '5', 't': '7'}
@@ -194,13 +193,8 @@ func init() {
 	flag.StringVar(&genFile, "gen-file", "generated.txt", "Specifies a file where generated passwords are dumped.")
 	flag.StringVar(&useFile, "use", "", "The file in which passwords can be pre-loaded from (e.g. an old gen-file).")
 	flag.StringVar(&inputHash, "in", "", "The hash to attempt to crack. If none is provided, the program will generated <max> passwords.")
-	flag.Uint64Var(&max, "max", 10^5, "Maximum number of passwords to generate.")
 	flag.Parse()
 
-	// make sure max is over 0
-	if max < 1 {
-		printer.Fatal("Maximum must be over 0.\n")
-	}
 	if keyTermsRaw == "" {
 		printer.Fatal("No key terms provided.\n")
 	} else {
