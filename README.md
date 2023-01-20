@@ -4,4 +4,4 @@
 
 *A program for cracking hashed passwords given a list of key terms.*
 
-
+![screenshot-2023-01-20-16:40:33](https://user-images.githubusercontent.com/107510599/213756412-6e77c6a8-5b7f-4788-8ff0-ae20398ac942.png)
