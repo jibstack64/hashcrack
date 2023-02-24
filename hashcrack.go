@@ -11,7 +11,6 @@ import (
 	"strings"
 
 	combinations "github.com/mxschmitt/golang-combinations"
-	"golang.org/x/exp/maps"
 )
 
 var (
@@ -25,8 +24,6 @@ var (
 
 	// common num-char char-num replaces in passwords
 	numChar = map[rune]rune{'a': '4', 'b': '8', 'e': '3', 'g': '9', 'i': '1', 'o': '0', 's': '5', 't': '7'}
-	nums    = maps.Keys(numChar)
-	chars   = maps.Values(numChar)
 
 	specialStrings = []string{
 		"@", "@@", "@@@", "@@@@", "@@@@@",
@@ -139,7 +136,7 @@ func main() {
 	signal.Notify(c, os.Interrupt)
 	go func() {
 		for range c {
-			printer.Warning("ctrl+c received, saving...")
+			printer.Warning("Ctrl+C received, saving...")
 			save(combos)
 			os.Exit(1)
 		}
