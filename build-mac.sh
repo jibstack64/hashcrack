@@ -1,1 +1,0 @@
-env GOOS=darwin GOARCH=amd64 go build -o hashcrack-mac hashcrack.go colour.go
