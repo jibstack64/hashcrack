@@ -189,7 +189,7 @@ func init() {
 	flag.StringVar(&keyTermsRaw, "terms", "", "The key terms to be used in the generated passwords (seperated by ',').")
 	flag.StringVar(&genFile, "gen-file", "generated.txt", "Specifies a file where generated passwords are dumped.")
 	flag.StringVar(&useFile, "use", "", "The file in which passwords can be pre-loaded from (e.g. an old gen-file).")
-	flag.StringVar(&inputHash, "in", "", "The hash to attempt to crack. If none is provided, the program will generated <max> passwords.")
+	flag.StringVar(&inputHash, "in", "", "The hash to attempt to crack. If none is provided, the program will generate <max> passwords.")
 	flag.Parse()
 
 	if keyTermsRaw == "" {
